@@ -1,0 +1,20 @@
+#body {
+	height: 1550px;
+    background: linear-gradient(to top, #66ffff 0%, #ffcccc 100%);
+}
+
+#p1 {
+	color: #3366ff;
+	font-size: 3;
+	font: Verdana:
+}
+
+#p2 {
+	color: #3366ff;
+	font: Droid Serif;
+}
+
+/*table:hover {
+	font-weight: bold;
+}*/
+
