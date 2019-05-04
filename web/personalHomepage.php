@@ -15,11 +15,9 @@
 	  a fair bit growing up so I've lived in a few other states as well.  Living with me is my wife of almost 8 years and our four year old daughter.  We just
 	  received a Great Pyrenees puppy as a housewarming gift/potential guard dog and we are in the process of getting chickens into their coop as I write this code.</p><br><br>
 	  
-	  <p>Display today's date and time.</p>  
-      <form action="clock.php" id="form" method="post" >
-      <input type="submit" value="Date/Time"/>
-      </form>  
-	  
+	  <?php 
+		echo 'Todays date and current time is ' . date("l, F jS Y h:i:s A");
+	  ?>	  
 	  
 	  <br><br>
 	  <h3>Quote and thought of the month</h3>
