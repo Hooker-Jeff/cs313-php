@@ -43,7 +43,7 @@
   
 </table> 
 <br><br>
-<a href="cart.html">View your cart</a>
+<a href="cart.php">View your cart</a>
 
 </body>
 </html>

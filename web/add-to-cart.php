@@ -8,6 +8,7 @@ if(empty($_session['cart'])){
 
 array_push($_session['cart'], $_GET['id']);
 
+echo "Number of Items in the cart = " . sizeof($_SESSION['cart']);
 ?>
 
 <p>Product was successfully added to your cart.<br>
