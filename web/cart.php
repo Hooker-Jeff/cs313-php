@@ -10,6 +10,7 @@ session_start();
 </head>
 
 <body>
+<center><h2>Your Cart</h2></center><br><hr>
 
 <?php
 
