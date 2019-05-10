@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -28,19 +26,19 @@ session_start();
     <td>Product 1</td>
 	<td>$245</td>
 	<td>Description description description</td>
-	<td><button type="button">Add to cart</button></td>
+	<td><center><a href="add-to-cart.php?id=Product1">Add to cart</a></center></td>
   </tr>
   <tr>
     <td>Product 2</td>
 	<td>$842</td>
 	<td>Description description description</td>
-	<td><button type="button">Add to cart</button></td>
+	<td><center><a href="add-to-cart.php?id=Product2">Add to cart</a></center></td>
   </tr>
   <tr>
     <td>Product 3</td>
 	<td>$35</td>
 	<td>Description description description</td>
-	<td><button type="button">Add to cart</button></td>
+	<td><center><a href="add-to-cart.php?id=Product3">Add to cart</a></center></td>
   </tr>
   
 </table> 
