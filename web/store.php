@@ -25,22 +25,22 @@ session_start();
     <th>Add to Cart?</th>
   </tr>
   <tr>
-    <td>;askgj</td>
+    <td>Product 1</td>
 	<td>$245</td>
-	<td>pkegfpqkrg iqwnrgpoa iwngro iwogw ogjwojgr </td>
-	<td>//button goes here</td>
+	<td>Description description description</td>
+	<td><button type="button">Add to cart</button></td>
   </tr>
   <tr>
-    <td>arg</td>
+    <td>Product 2</td>
 	<td>$842</td>
-	<td>a'pksrgpkrg p rjgpawj rgpjar</td>
-	<td>//button goes here</td>
+	<td>Description description description</td>
+	<td><button type="button">Add to cart</button></td>
   </tr>
   <tr>
-    <td>fgkstt</td>
+    <td>Product 3</td>
 	<td>$35</td>
-	<td>asfg;oj oqrigogr jrig0aihrg</td>
-	<td>//button goes here</td>
+	<td>Description description description</td>
+	<td><button type="button">Add to cart</button></td>
   </tr>
   
 </table> 
