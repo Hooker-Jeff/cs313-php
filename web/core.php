@@ -4,7 +4,7 @@
 
 	{
 
-	  $dbUrl = getenv('DATABASE_URL');
+	  $dbUrl = getenv('HEROKU_POSTGRESQL_IVORY_URL');
 
 
 
