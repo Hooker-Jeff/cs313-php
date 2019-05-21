@@ -36,9 +36,9 @@
 
 	{
 
-	  echo 'Error!: ' . $ex->getMessage();
-
-	  die();
+	  	echo "Error connecting to DB. Details: $ex";
+		
+		die();
 
 	}
 
@@ -67,15 +67,16 @@
 	  <h1> Scripture Resources </h1>
 
 		<?php
+		
+			$statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
+			$statement->execute();
 
-			foreach ($db->query('SELECT * FROM scriptures') as $row)
-
-			{
-
-			  echo '<br><strong>' . $row['book'] . ' ' . $row['chapter'] 
-
-			  . ':' . $row['verse'] . '</strong> - ' . $row['content'];
-
+			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+			$book = $row['book'];
+			$chapter = $row['chapter'];
+			$verse = $row['verse'];
+			$content = $row['content'];
+			echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
 			}
 
 		?>
