@@ -95,7 +95,7 @@ catch (PDOException $ex)
 			echo 'Intimidation: ' . $row['ability16'];
 			echo 'Performance: ' . $row['ability17'];
 			echo 'Persuasion: ' . $row['ability18'];
-			echo '<br/>;
+			echo '<br/>';
 		}
 		?>
 	</body>
