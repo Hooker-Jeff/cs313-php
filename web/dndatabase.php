@@ -22,6 +22,12 @@ catch (PDOException $ex)
   die();
 }
 
+
+
+$qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
+
+
+
 ?>
 
 <!DOCTYPE html>
