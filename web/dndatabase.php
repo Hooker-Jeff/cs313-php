@@ -68,7 +68,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['level'] . '</td>';
 			echo '<td>' . $row['xp'] . '</td>';
 			echo '<td>' . $row['hp_max'] . '</td>';
-			echo '<td>' . $row['hp_current'] . '</td></tr><br/><br/>';
+			echo '<td>' . $row['hp_current'] . '</td></tr></table><br/><br/>';
 			
 			
 			
