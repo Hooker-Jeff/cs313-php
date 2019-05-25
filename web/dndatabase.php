@@ -40,6 +40,12 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 	    * {
 		  text-align: center;
 		}
+		
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
 	</style>
 	</head>
 
@@ -51,7 +57,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 		
 		foreach ($db->query('SELECT * FROM public.character') as $row)
 		{
-			echo '<table><tr><th>Character Name</th>';
+			echo '<table style="width:100%" ><tr><th>Character Name</th>';
 			echo '<th>Player Name</th>';
 			echo '<th>Race</th>';
 			echo '<th>Class</th>';
