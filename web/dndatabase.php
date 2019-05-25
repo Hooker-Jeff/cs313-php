@@ -91,7 +91,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<th>Dexterity Bonus</th>';
 			echo '<th>Dexterity Saving Throw</th></tr>';
 			
-			echo '<td>' . $row['dex_amnt'] . '</td>';
+			echo '<tr><td>' . $row['dex_amnt'] . '</td>';
 			echo '<td>' . $row['dex_bonus'] . '</td>';
 			echo '<td>' . $row['dex_saving'] . '</td></tr></table>';
 			
@@ -99,7 +99,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<th>Constitution Bonus</th>';
 			echo '<th>Constitution Saving Throw</th></tr>';
 			
-			echo '<td>' . $row['con_amnt'] . '</td>';
+			echo '<tr><td>' . $row['con_amnt'] . '</td>';
 			echo '<td>' . $row['con_bonus'] . '</td>';
 			echo '<td>' . $row['con_saving'] . '</td></tr></table>';
 			
@@ -107,7 +107,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<th>Intelligence Bonus</th>';
 			echo '<th>Intelligence Saving Throw</th></tr>';
 			
-			echo '<td>' . $row['int_amnt'] . '</td>';
+			echo '<tr><td>' . $row['int_amnt'] . '</td>';
 			echo '<td>' . $row['int_bonus'] . '</td>';
 			echo '<td>' . $row['int_saving'] . '</td></tr></table>';
 			
@@ -115,7 +115,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<th>Wisdom Bonus</th>';
 			echo '<th>Wisdom Saving Throw</th></tr>';
 			
-			echo '<td>' . $row['wis_amnt'] . '</td>';
+			echo '<tr><td>' . $row['wis_amnt'] . '</td>';
 			echo '<td>' . $row['wis_bonus'] . '</td>';
 			echo '<td>' . $row['wis_saving'] . '</td></tr></table>';
 			
@@ -123,28 +123,30 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<th>Charisma Bonus</th>';
 			echo '<th>Charisma Saving Throw</th></tr>';
 			
-			echo '<td>' . $row['cha_amnt'] . '</td>';
+			echo '<tr><td>' . $row['cha_amnt'] . '</td>';
 			echo '<td>' . $row['cha_bonus'] . '</td>';
 			echo '<td>' . $row['cha_saving'] . '</td></tr></table><br/><br/>';
 			
 			
 			
+			echo '<table align="center" width="50%"><tr><th>Armor Class</th>';
+			echo '<th>Total Hit Dice</th>';
+			echo '<th>Proficiency Bonus</th>';
+			echo '<th>Speed</th>';
+			echo '<th>Gold</th></tr>';
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			echo ' Armor Class: ' . $row['ac'];
-			echo ' Total Hit Dice: ' . $row['hit_dice'];
-			echo ' Proficiency Bonus: ' . $row['proficiency_bonus'];
-			echo ' Speed: ' . $row['speed'];
-			echo ' Gold: ' . $row['gold'] . '<br/>' . '<br/>';
+			echo '<tr><td>' . $row['ac'] . '</td>';
+			echo '<td>' . $row['hit_dice'] . '</td>';
+			echo '<td>' . $row['proficiency_bonus'] . '</td>';
+			echo '<td>' . $row['speed'] . '</td>';
+			echo '<td>' . $row['gold'] . '</td></tr></table><br/><br/>';
+			 
+			 
+			 
+			 
+			 
+			 
+			 
 			echo ' Athletics: ' . $row['ability1'];
 			echo ' Acrobatics: ' . $row['ability2'];
 			echo ' Slight of Hand: ' . $row['ability3'];
