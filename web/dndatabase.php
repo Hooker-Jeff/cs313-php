@@ -23,8 +23,9 @@ catch (PDOException $ex)
 }
 
 
-
-
+/*
+$qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
+*/		
 
 
 ?>
@@ -50,17 +51,33 @@ catch (PDOException $ex)
 		
 		foreach ($db->query('SELECT * FROM public.character') as $row)
 		{
-			echo '<td><th>Character Name</th>';
-			echo '<tr>' . $row['character_name'] . '</tr>';
-			echo ' Player Name: ' . $row['player_name'];
-			$qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
-			echo ' Race: ' . $row['local_race_id'];
-			echo ' Class: ' . $row['local_class_id'];
-			echo ' Alignment: ' . $row['local_alignment_id'];
-			echo ' Level: ' . $row['level'];
-			echo ' Experience points: ' . $row['xp'];
-			echo ' Maximum HP: ' . $row['hp_max'];
-			echo ' Current HP: ' . $row['hp_current'] . '<br/>' . '<br/>';
+			echo '<table><tr><th>Character Name</th>';
+			echo '<th>Player Name</th>';
+			echo '<th>Race</th>';
+			echo '<th>Class</th>';
+			echo '<th>Alignment</th>';
+			echo '<th>Level</th>';
+			echo '<th>Experience points</th>';
+			echo '<th>Maximum HP</th>';
+			echo '<th>Current HP</th></tr>';
+			echo '<tr><td>' . $row['character_name'] . '</td>';
+			echo '<td>' . $row['player_name'] . '</td>';
+			echo '<td>' . $row['local_race_id'] . '</td>';
+			echo '<td>' . $row['local_class_id'] . '</td>';
+			echo '<td>' . $row['local_alignment_id'] . '</td>';
+			echo '<td>' . $row['level'] . '</td>';
+			echo '<td>' . $row['xp'] . '</td>';
+			echo '<td>' . $row['hp_max'] . '</td>';
+			echo '<td>' . $row['hp_current'] . '</td></tr><br/><br/>';
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			echo ' Strength: ' . $row['str_amnt'];
 			echo ' Strength Bonus: ' . $row['str_bonus'];
 			echo ' Strength Saving Throw: ' . $row['str_saving'] . '<br/>';
