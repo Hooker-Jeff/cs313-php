@@ -172,7 +172,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			
 			 echo '<br/><br/><br/>';
 		}
-		}
+		
 		?>
 	</body>
 </html>
