@@ -77,44 +77,66 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['hp_current'] . '</td></tr></table><br/><br/>';
 			
 			
+			
+			
 			echo '<table><tr><th>Strength</th>';
 			echo '<th>Strength Bonus</th>';
-			echo '<th>Strength Saving Throw</th>';
-			echo '<th>Dexterity</th>';
-			echo '<th>Dexterity Bonus</th>';
-			echo '<th>Dexterity Saving Throw</th>';
-			echo '<th>Constitution</th>';
-			echo '<th>Constitution Bonus</th>';
-			echo '<th>Constitution Saving Throw</th>';
-			echo '<th>Intelligence</th>';
-			echo '<th>Intelligence Bonus</th>';
-			echo '<th>Intelligence Saving Throw</th>';
-			echo '<th>Wisdom</th>';
-			echo '<th>Wisdom Bonus</th>';
-			echo '<th>Wisdom Saving Throw</th>';
-			echo '<th>Charisma</th>';
-			echo '<th>Charisma Bonus</th>';
-			echo '<th>Charisma Saving Throw</th></tr>';
-			
+			echo '<th>Strength Saving Throw</th></tr>';
 			
 			echo '<tr><td>' . $row['str_amnt'] . '</td>';
 			echo '<td>' . $row['str_bonus'] . '</td>';
-			echo '<td>' . $row['str_saving'] . '</td>';
+			echo '<td>' . $row['str_saving'] . '</td></tr></table>';
+			
+			echo '<table><tr><th>Dexterity</th>';
+			echo '<th>Dexterity Bonus</th>';
+			echo '<th>Dexterity Saving Throw</th></tr>';
+			
 			echo '<td>' . $row['dex_amnt'] . '</td>';
 			echo '<td>' . $row['dex_bonus'] . '</td>';
-			echo '<td>' . $row['dex_saving'] . '</td>';
+			echo '<td>' . $row['dex_saving'] . '</td></tr></table>';
+			
+			echo '<table><tr><th>Constitution</th>';
+			echo '<th>Constitution Bonus</th>';
+			echo '<th>Constitution Saving Throw</th></tr>';
+			
 			echo '<td>' . $row['con_amnt'] . '</td>';
 			echo '<td>' . $row['con_bonus'] . '</td>';
-			echo '<td>' . $row['con_saving'] . '</td>';
+			echo '<td>' . $row['con_saving'] . '</td></tr></table>';
+			
+			echo '<table><tr><th>Intelligence</th>';
+			echo '<th>Intelligence Bonus</th>';
+			echo '<th>Intelligence Saving Throw</th></tr>';
+			
 			echo '<td>' . $row['int_amnt'] . '</td>';
 			echo '<td>' . $row['int_bonus'] . '</td>';
-			echo '<td>' . $row['int_saving'] . '</td>';
+			echo '<td>' . $row['int_saving'] . '</td></tr></table>';
+			
+			echo '<table><tr><th>Wisdom</th>';
+			echo '<th>Wisdom Bonus</th>';
+			echo '<th>Wisdom Saving Throw</th></tr>';
+			
 			echo '<td>' . $row['wis_amnt'] . '</td>';
 			echo '<td>' . $row['wis_bonus'] . '</td>';
-			echo '<td>' . $row['wis_saving'] . '</td>';
+			echo '<td>' . $row['wis_saving'] . '</td></tr></table>';
+			
+			echo '<table><tr><th>Charisma</th>';
+			echo '<th>Charisma Bonus</th>';
+			echo '<th>Charisma Saving Throw</th></tr>';
+			
 			echo '<td>' . $row['cha_amnt'] . '</td>';
 			echo '<td>' . $row['cha_bonus'] . '</td>';
 			echo '<td>' . $row['cha_saving'] . '</td></tr></table><br/><br/>';
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
