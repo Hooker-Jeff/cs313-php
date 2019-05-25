@@ -52,11 +52,13 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 	<body>
 
 	  <h1> D&D Database </h1>
+	  
+	  
 
 		<?php
 		
 			
-		foreach ($db->query('SELECT * FROM public.character WHERE character_name = $_POST['DnDForm'] ') as $row)
+		foreach ($db->query('SELECT * FROM public.character WHERE character_name = $_POST['value'] ') as $row)
 		{
 			echo '<table style="width:100%" ><tr><th>Character Name</th>';
 			echo '<th>Player Name</th>';
