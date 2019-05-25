@@ -79,7 +79,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			
 			
 			
-			echo '<table align="center"><tr><th>Strength</th>';
+			echo '<table align="center" width="50%"><tr><th>Strength</th>';
 			echo '<th>Strength Bonus</th>';
 			echo '<th>Strength Saving Throw</th></tr>';
 			
@@ -87,7 +87,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['str_bonus'] . '</td>';
 			echo '<td>' . $row['str_saving'] . '</td></tr></table>';
 			
-			echo '<table align="center"><tr><th>Dexterity</th>';
+			echo '<table align="center" width="50%"><tr><th>Dexterity</th>';
 			echo '<th>Dexterity Bonus</th>';
 			echo '<th>Dexterity Saving Throw</th></tr>';
 			
@@ -95,7 +95,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['dex_bonus'] . '</td>';
 			echo '<td>' . $row['dex_saving'] . '</td></tr></table>';
 			
-			echo '<table align="center"><tr><th>Constitution</th>';
+			echo '<table align="center" width="50%"><tr><th>Constitution</th>';
 			echo '<th>Constitution Bonus</th>';
 			echo '<th>Constitution Saving Throw</th></tr>';
 			
@@ -103,7 +103,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['con_bonus'] . '</td>';
 			echo '<td>' . $row['con_saving'] . '</td></tr></table>';
 			
-			echo '<table align="center"><tr><th>Intelligence</th>';
+			echo '<table align="center" width="50%"><tr><th>Intelligence</th>';
 			echo '<th>Intelligence Bonus</th>';
 			echo '<th>Intelligence Saving Throw</th></tr>';
 			
@@ -111,7 +111,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['int_bonus'] . '</td>';
 			echo '<td>' . $row['int_saving'] . '</td></tr></table>';
 			
-			echo '<table align="center"><tr><th>Wisdom</th>';
+			echo '<table align="center" width="50%"><tr><th>Wisdom</th>';
 			echo '<th>Wisdom Bonus</th>';
 			echo '<th>Wisdom Saving Throw</th></tr>';
 			
@@ -119,7 +119,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['wis_bonus'] . '</td>';
 			echo '<td>' . $row['wis_saving'] . '</td></tr></table>';
 			
-			echo '<table align="center"><tr><th>Charisma</th>';
+			echo '<table align="center" width="50%"><tr><th>Charisma</th>';
 			echo '<th>Charisma Bonus</th>';
 			echo '<th>Charisma Saving Throw</th></tr>';
 			
