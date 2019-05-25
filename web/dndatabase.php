@@ -24,7 +24,6 @@ catch (PDOException $ex)
 
 
 
-$qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
 
 
 
@@ -51,8 +50,10 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 		
 		foreach ($db->query('SELECT * FROM public.character') as $row)
 		{
-			echo 'Character Name: ' . $row['character_name'];
+			echo '<td><th>Character Name</th>';
+			echo '<tr>' . $row['character_name'] . '</tr>';
 			echo ' Player Name: ' . $row['player_name'];
+			$qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
 			echo ' Race: ' . $row['local_race_id'];
 			echo ' Class: ' . $row['local_class_id'];
 			echo ' Alignment: ' . $row['local_alignment_id'];
@@ -101,7 +102,7 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo ' Intimidation: ' . $row['ability16'];
 			echo ' Performance: ' . $row['ability17'];
 			echo ' Persuasion: ' . $row['ability18'];
-			echo ' <br/>' . '<br/>' . '<br/>';
+			echo ' </td>' . '<br/>' . '<br/>' . '<br/>';
 		}
 		?>
 	</body>
