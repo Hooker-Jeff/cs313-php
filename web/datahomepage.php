@@ -61,7 +61,7 @@ $option .= "</select>"
 	  <h1> D&D Database </h1><br/><br/>
 	  
 	  <form action="dndatabase.php" method="POST"  name="DnDForm">
-	  <select form="DnDForm">
+	  <select form="DnDForm" name="DnDForm">
 	    <option value="No Character Selected">[Choose your character]</option>
 		<option value="Taako Taaco">Taako</option>
 		<option value="Sarissa Shadowhorn">Sarissa</option>
