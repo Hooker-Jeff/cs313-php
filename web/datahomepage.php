@@ -23,7 +23,7 @@ catch (PDOException $ex)
   die();
 }
 
-*/
+
 
 
 
@@ -37,6 +37,8 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 $option .= "</select>"
+
+*/
 
 ?>
 
@@ -58,14 +60,11 @@ $option .= "</select>"
 
 	  <h1> D&D Database </h1><br/><br/>
 	  
-	  <form action="dndatabase.php" method="POST" name="DnDForm">
-	  
-	  <?php
-	  
-	  echo $option;  
-	  
-	  ?>
-	  
+	  <form action="dndatabase.php" method="POST"  name="DnDForm">
+	  <select form="DnDForm">
+		<option value="Taako Taaco">Taako</option>
+		<option value="Sarissa Shadowhorn">Sarissa</option>
+	  </select>	  
 	  <input type="submit" value="Select Character" />
 	  </form>
 	  
