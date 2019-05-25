@@ -71,37 +71,53 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['local_race_id'] . '</td>';
 			echo '<td>' . $row['local_class_id'] . '</td>';
 			echo '<td>' . $row['local_alignment_id'] . '</td>';
-			echo '<td>' . $row['level'] . '</td>';
+			echo '<td>' . $row['char_level'] . '</td>';
 			echo '<td>' . $row['xp'] . '</td>';
 			echo '<td>' . $row['hp_max'] . '</td>';
 			echo '<td>' . $row['hp_current'] . '</td></tr></table><br/><br/>';
 			
 			
+			echo '<table><tr><th>Strength</th>';
+			echo '<th>Strength Bonus</th>';
+			echo '<th>Strength Saving Throw</th>';
+			echo '<th>Dexterity</th>';
+			echo '<th>Dexterity Bonus</th>';
+			echo '<th>Dexterity Saving Throw</th>';
+			echo '<th>Constitution</th>';
+			echo '<th>Constitution Bonus</th>';
+			echo '<th>Constitution Saving Throw</th>';
+			echo '<th>Intelligence</th>';
+			echo '<th>Intelligence Bonus</th>';
+			echo '<th>Intelligence Saving Throw</th>';
+			echo '<th>Wisdom</th>';
+			echo '<th>Wisdom Bonus</th>';
+			echo '<th>Wisdom Saving Throw</th>';
+			echo '<th>Charisma</th>';
+			echo '<th>Charisma Bonus</th>';
+			echo '<th>Charisma Saving Throw</th></tr>';
+			
+			
+			echo '<tr><td>' . $row['str_amnt'] . '</td>';
+			echo '<td>' . $row['str_bonus'] . '</td>';
+			echo '<td>' . $row['str_saving'] . '</td>';
+			echo '<td>' . $row['dex_amnt'] . '</td>';
+			echo '<td>' . $row['dex_bonus'] . '</td>';
+			echo '<td>' . $row['dex_saving'] . '</td>';
+			echo '<td>' . $row['con_amnt'] . '</td>';
+			echo '<td>' . $row['con_bonus'] . '</td>';
+			echo '<td>' . $row['con_saving'] . '</td>';
+			echo '<td>' . $row['int_amnt'] . '</td>';
+			echo '<td>' . $row['int_bonus'] . '</td>';
+			echo '<td>' . $row['int_saving'] . '</td>';
+			echo '<td>' . $row['wis_amnt'] . '</td>';
+			echo '<td>' . $row['wis_bonus'] . '</td>';
+			echo '<td>' . $row['wis_saving'] . '</td>';
+			echo '<td>' . $row['cha_amnt'] . '</td>';
+			echo '<td>' . $row['cha_bonus'] . '</td>';
+			echo '<td>' . $row['cha_saving'] . '</td></tr></table><br/><br/>';
 			
 			
 			
-			
-			
-			
-			
-			echo ' Strength: ' . $row['str_amnt'];
-			echo ' Strength Bonus: ' . $row['str_bonus'];
-			echo ' Strength Saving Throw: ' . $row['str_saving'] . '<br/>';
-			echo ' Dexterity: ' . $row['dex_amnt'];
-			echo ' Dexterity Bonus: ' . $row['dex_bonus'];
-			echo ' Dexterity Saving Throw: ' . $row['dex_saving'] . '<br/>';
-			echo ' Constitution: ' . $row['con_amnt'];
-			echo ' Constitution Bonus: ' . $row['con_bonus'];
-			echo ' Constitution Saving Throw: ' . $row['con_saving'] . '<br/>';
-			echo ' Intelligence: ' . $row['int_amnt'];
-			echo ' Intelligence Bonus: ' . $row['int_bonus'];
-			echo ' Intelligence Saving Throw: ' . $row['int_saving'] . '<br/>';
-			echo ' Wisdom: ' . $row['wis_amnt'];
-			echo ' Wisdom Bonus: ' . $row['wis_bonus'];
-			echo ' Wisdom Saving Throw: ' . $row['wis_saving'] . '<br/>';
-			echo ' Charisma: ' . $row['cha_amnt'];
-			echo ' Charisma Bonus: ' . $row['cha_bonus'];
-			echo ' Charisma Saving Throw: ' . $row['cha_saving'] . '<br/>' . '<br/>';
 			echo ' Armor Class: ' . $row['ac'];
 			echo ' Total Hit Dice: ' . $row['hit_dice'];
 			echo ' Proficiency Bonus: ' . $row['proficiency_bonus'];
