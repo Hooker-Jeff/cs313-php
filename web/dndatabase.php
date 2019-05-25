@@ -137,35 +137,32 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			
 			echo '<tr><td>' . $row['ac'] . '</td>';
 			echo '<td>' . $row['hit_dice'] . '</td>';
-			echo '<td>' . $row['proficiency_bonus'] . '</td>';
+			echo '<td>' . $row['prof_bonus'] . '</td>';
 			echo '<td>' . $row['speed'] . '</td>';
 			echo '<td>' . $row['gold'] . '</td></tr></table><br/><br/>';
 			 
 			 
+			 echo '<table align="center" width="50%"><tr><td>Athletics</td><td>' . $row['ability1'] . '</td></tr>';
+			 echo '<tr><td>Acrobatics</td><td>' . $row['ability2'] . '</td></tr>';
+			 echo '<tr><td>Slight of Hand</td><td>' . $row['ability3'] . '</td></tr>';
+			 echo '<tr><td>Stealth</td><td>' . $row['ability4'] . '</td></tr>';
+			 echo '<tr><td>Arcane</td><td>' . $row['ability5'] . '</td></tr>';
+			 echo '<tr><td>History</td><td>' . $row['ability6'] . '</td></tr>';
+			 echo '<tr><td>Investigation</td><td>' . $row['ability7'] . '</td></tr>';
+			 echo '<tr><td>Nature</td><td>' . $row['ability8'] . '</td></tr>';
+			 echo '<tr><td>Religion</td><td>' . $row['ability9'] . '</td></tr>';
+			 echo '<tr><td>Insight</td><td>' . $row['ability10'] . '</td></tr>';
+			 echo '<tr><td>Medicine</td><td>' . $row['ability11'] . '</td></tr>';
+			 echo '<tr><td>Animal Handling</td><td>' . $row['ability12'] . '</td></tr>';
+			 echo '<tr><td>Perception</td><td>' . $row['ability13'] . '</td></tr>';
+			 echo '<tr><td>Survival</td><td>' . $row['ability14'] . '</td></tr>';
+			 echo '<tr><td>Deception</td><td>' . $row['ability15'] . '</td></tr>';
+			 echo '<tr><td>Intimidation</td><td>' . $row['ability16'] . '</td></tr>';
+			 echo '<tr><td>Performance</td><td>' . $row['ability17'] . '</td></tr>';
+			 echo '<tr><td>Persuasion</td><td>' . $row['ability18'] . '</td></tr></table>';
 			 
-			 
-			 
-			 
-			 
-			echo ' Athletics: ' . $row['ability1'];
-			echo ' Acrobatics: ' . $row['ability2'];
-			echo ' Slight of Hand: ' . $row['ability3'];
-			echo ' Stealth: ' . $row['ability4'];
-			echo ' Arcane: ' . $row['ability5'];
-			echo ' History: ' . $row['ability6'];
-			echo ' Investigation: ' . $row['ability7'];
-			echo ' Nature: ' . $row['ability8'];
-			echo ' Religion: ' . $row['ability9'];
-			echo ' Insight: ' . $row['ability10'];
-			echo ' Medicine: ' . $row['ability11'];
-			echo ' Animal Handling: ' . $row['ability12'];
-			echo ' Perception: ' . $row['ability13'];
-			echo ' Survival: ' . $row['ability14'];
-			echo ' Deception: ' . $row['ability15'];
-			echo ' Intimidation: ' . $row['ability16'];
-			echo ' Performance: ' . $row['ability17'];
-			echo ' Persuasion: ' . $row['ability18'];
-			echo ' </td>' . '<br/>' . '<br/>' . '<br/>';
+			
+			 echo '<br/><br/><br/>';
 		}
 		?>
 	</body>
