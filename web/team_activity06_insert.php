@@ -13,8 +13,7 @@ $db = get_db();
 
 try
 {
-	
-	$query = 'INSERT INTO public.scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
+	$query = 'INSERT INTO scripture(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
 	$statement = $db->prepare($query);
 	
 	$statement->bindValue(':book', $book);
@@ -28,7 +27,7 @@ try
 	foreach ($topicIds as $topicId)
 	{
 		echo "ScriptureId: $scriptureId, topicId: $topicId";
-		$statement = $db->prepare('INSERT INTO scriptureconnect(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
+		$statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
 		$statement->bindValue(':scriptureId', $scriptureId);
 		$statement->bindValue(':topicId', $topicId);
 		$statement->execute();

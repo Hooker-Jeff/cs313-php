@@ -56,7 +56,7 @@ $db = get_db();
 	<?php
 		try
 		{
-		$statement = $db->prepare('SELECT id, name FROM public.topic');
+		$statement = $db->prepare('SELECT id, name FROM topic');
 		$statement->execute();
 	
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))

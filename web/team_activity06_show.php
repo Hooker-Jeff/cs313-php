@@ -27,7 +27,7 @@ $db = get_db();
 
 	<body>
 	  
-	  
+	  <h1>Scripture and Topic List</h1>
 
 		<?php
 		try {
