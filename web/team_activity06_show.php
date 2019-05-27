@@ -32,7 +32,7 @@ $db = get_db();
 		<?php
 		try {
 		
-		$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM public.scriptures');
+		$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
 		$statement->execute();
 		
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
