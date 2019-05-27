@@ -1,26 +1,8 @@
 <?php
 
-try
-{
-  $dbUrl = getenv('HEROKU_POSTGRESQL_IVORY_URL');
+require("dbConnect.php");
+$db = get_db();
 
-  $dbOpts = parse_url($dbUrl);
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
 
 
 ?>
@@ -48,7 +30,7 @@ catch (PDOException $ex)
 	
 	<h1>Enter New Scriptures and Topics</h1>
 
-	<form id="mainForm" action="insertTopic.php" method="POST">
+	<form id="mainForm" action="team_activity06_insert.php" method="POST">
 
 	<input type="text" id="txtBook" name="txtBook"></input>
 	<label for="txtBooK">Book</label>
@@ -71,10 +53,10 @@ catch (PDOException $ex)
 
 	  
 
-		<?php
+	<?php
 		try
 		{
-		$statement = $db->prepare('SELECT id, name FROM topic');
+		$statement = $db->prepare('SELECT id, name FROM public.topic');
 		$statement->execute();
 	
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -94,39 +76,6 @@ catch (PDOException $ex)
 		echo "Error connecting to DB. Details: $ex";
 		die();
 		}
-		
-		
-		
-		
-		
-		/*
-		foreach ($db->query('SELECT * FROM public.scriptures') as $row)
-		{
-			
-			
-			echo '<table style="width:100%" ><tr><th>Character Name</th>';
-			echo '<th>Player Name</th>';
-			echo '<th>Race</th>';
-			echo '<th>Class</th>';
-			echo '<th>Alignment</th>';
-			echo '<th>Level</th>';
-			echo '<th>Experience points</th>';
-			echo '<th>Maximum HP</th>';
-			echo '<th>Current HP</th></tr>';
-			echo '<tr><td>' . $row['character_name'] . '</td>';
-			echo '<td>' . $row['player_name'] . '</td>';
-			echo '<td>' . $row['local_race_id'] . '</td>';
-			echo '<td>' . $row['local_class_id'] . '</td>';
-			echo '<td>' . $row['local_alignment_id'] . '</td>';
-			echo '<td>' . $row['char_level'] . '</td>';
-			echo '<td>' . $row['xp'] . '</td>';
-			echo '<td>' . $row['hp_max'] . '</td>';
-			echo '<td>' . $row['hp_current'] . '</td></tr></table><br/><br/>';
-			*/
-			
-			
-		}
-		
 		?>
 		
 		<br />
