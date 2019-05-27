@@ -78,11 +78,11 @@ $db = get_db();
 		}
 		?>
 		
-		<br />
+	<br />
 
 	<input type="submit" value="Add to Database" />
 
-</form>
+	</form>
 
 	</body>
 </html>

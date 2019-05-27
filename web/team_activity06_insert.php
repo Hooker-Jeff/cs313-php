@@ -38,6 +38,6 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: showTopics.php");
+header("Location: team_activity06_show.php");
 die();
 ?>
