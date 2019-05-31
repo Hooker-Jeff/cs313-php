@@ -38,7 +38,7 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  <ul>
 	  
 	  <?php
-	  foreach($characters as $characters)
+	  foreach($characters as $character)
 	  {
 		  $char_name = $character['character_name'];
 		  echo '<li><p>$char_name</p></li>'
