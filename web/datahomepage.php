@@ -1,44 +1,19 @@
 <?php
 
-/*
-try
-{
-  $dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');
+require("dbConnect.php");
+$db = get_db();
 
-  $dbOpts = parse_url($dbUrl);
+//$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
+//$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+//$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+//$stmt->execute();
+//$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
+$query ='select character_id,character_name from character';
+$stmt = $db->prepare($query);
+$stmt->execute();
+$characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-
-
-
-
-
-$dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');
-$sql = "SELECT character_name FROM public.character ORDER BY character_name ASC";
-$result = mysqli_query($dbURL,$sql) or die("Bad SQL: $sql");
-
-$option = "<select name='character_name' >";
-while($row = mysqli_fetch_assoc($result)) {
-	$option .= "<option value='{$row['character_name']}'>{$row(['character_name']}</option>\n";
-}
-
-$option .= "</select>"
-
-*/
 
 ?>
 
@@ -60,6 +35,25 @@ $option .= "</select>"
 
 	  <h1> D&D Database </h1><br/><br/>
 	  
+	  <ul>
+	  
+	  <?php
+	  foreach($characters as $characters){
+		  $char_name = $characters['character_name'];
+		  echo '<li><p>$char_name</p></li>'
+	  }
+	  
+	  ?>
+	  
+	  </ul>
+		
+	  
+	  
+	  
+	  
+	  
+	  
+	  <!--
 	  <form action="dndatabase.php" method="POST">
 	  <select name="DnDForm">
 	    <option value="No Character Selected">[Choose your character]</option>
@@ -68,14 +62,22 @@ $option .= "</select>"
 	  </select>	  
 	  <input type="submit" value="Select Character" />
 	  </form>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+	  -->
 	  
 	</body>
 </html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

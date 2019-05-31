@@ -1,5 +1,14 @@
 <?php
 
+
+
+require("dbConnect.php");
+$db = get_db();
+
+
+
+
+/*
 try
 {
   $dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');
@@ -26,6 +35,8 @@ catch (PDOException $ex)
 /*
 $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
 */		
+
+*/
 
 
 ?>
