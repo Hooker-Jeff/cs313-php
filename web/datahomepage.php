@@ -35,26 +35,29 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	  <h1> D&D Database </h1><br/><br/>
 	  
+	  
+	  <!--
 	  <ul>
 	  
 	  <?php
+	  /*
 	  foreach($characters as $character)
 	  {
 		  $char_name = $character['character_name'];
 		  echo '<li><p>$char_name</p></li>'
 	  }
-	  
+	  */
 	  ?>
 	  
 	  </ul>
-		
+	  -->
 	  
 	  
 	  
 	  
 	  
 	  
-	  <!--
+	 
 	  <form action="dndatabase.php" method="POST">
 	  <select name="DnDForm">
 	    <option value="No Character Selected">[Choose your character]</option>
@@ -63,7 +66,7 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  </select>	  
 	  <input type="submit" value="Select Character" />
 	  </form>
-	  -->
+	  
 	  
 	</body>
 </html> 
