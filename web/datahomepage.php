@@ -9,7 +9,7 @@ $db = get_db();
 //$stmt->execute();
 //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$query ='select character_id,character_name from character';
+$query ='SELECT character_name FROM character';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -39,7 +39,7 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  
 	  <?php
 	  foreach($characters as $characters){
-		  $char_name = $characters['character_name'];
+		  $char_name = $character['character_name'];
 		  echo '<li><p>$char_name</p></li>'
 	  }
 	  
