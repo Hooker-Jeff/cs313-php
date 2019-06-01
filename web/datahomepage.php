@@ -38,7 +38,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  {
 		  $id = $character['character_id'];
 		  $char_name = $character['character_name'];
-		  echo "<li><p><a href='dndatabase.php?course_id=$id'>$char_name</a></p></li>";
+		  echo "<li><p><a href='dndatabase.php?character_id=$id'>$char_name</a></p></li>";
 	  }
 	  
 	  ?>
