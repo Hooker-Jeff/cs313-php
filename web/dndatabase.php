@@ -1,10 +1,17 @@
 <?php
 
-require("dbConnect.php");
-$db = get_db();
+if (!isset($_GET['character_id'])) {
+	die("Error, character ID not specified");
+}
+
+$character_id = htmlspecialchars($_GET['character_id']);
+
 
 
 /*
+require("dbConnect.php");
+$db = get_db();
+
 try
 {
   $dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');

@@ -21,7 +21,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html>
 
 	<head>
-	<title>D&D Database</title>
+	<title>D&D Database</title> 
 	</head>
 
 	<body>
@@ -36,8 +36,9 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  
 	  foreach($rows as $character)
 	  {
+		  $id = $character['character_id'];
 		  $char_name = $character['character_name'];
-		  echo "<li><p>$char_name</p></li>";
+		  echo "<li><p><a href='dndatabase.php?course_id=$id'>$char_name</a></p></li>";
 	  }
 	  
 	  ?>
