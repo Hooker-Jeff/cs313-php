@@ -8,7 +8,7 @@ $db = get_db();
 //$stmt->execute();
 //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$query = 'SELECT character_name FROM character';
+$query = 'SELECT character_name,character_id FROM character';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
