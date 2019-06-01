@@ -18,12 +18,13 @@ JOIN race r ON c.local_race_id = r.race_id
 JOIN class_table s ON c.local_class_id = s.class_id 
 JOIN alignment a ON c.local_alignment_id = a.alignment_id 
 WHERE c.character_id = :id';
+
 $stmt = $db->prepare($query);
-$stmt->bindValue(":id", $character_id, PDO::PARAM_INT);
+$stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
+$character_name = $rows[1]['character_name'];
 
 
 
