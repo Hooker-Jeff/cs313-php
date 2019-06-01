@@ -1,8 +1,10 @@
 <?php
 
+
 if (!isset($_GET['character_id'])) {
 	die("Error, character ID not specified");
 }
+
 
 $character_id = htmlspecialchars($_GET['character_id']);
 
@@ -12,10 +14,10 @@ $db = get_db();
 
 
 $query='SELECT * FROM character c 
- JOIN race r ON c.local_race_id = r.race_id 
- JOIN class_table s ON c.local_class_id = s.class_id 
- JOIN alignment a ON c.local_alignmnet_id = a.alignment_id
- WHERE character_id = :id';
+JOIN race r ON c.local_race_id = r.race_id 
+JOIN class_table s ON c.local_class_id = s.class_id 
+JOIN alignment a ON c.local_alignment_id = a.alignment_id 
+WHERE character_id = :id';
 $stmt = $db->prepare($query);
 $stmt->bindValue(":id", $character_id, PDO::PARAM_INT);
 $stmt->execute();
@@ -67,9 +69,9 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			echo '<th>Current HP</th></tr>';
 			echo '<tr><td>' . $row['character_name'] . '</td>';
 			echo '<td>' . $row['player_name'] . '</td>';
-			echo '<td>' . $row['local_race_id'] . '</td>';
-			echo '<td>' . $row['local_class_id'] . '</td>';
-			echo '<td>' . $row['local_alignment_id'] . '</td>';
+			echo '<td>' . $row['race_name'] . '</td>';
+			echo '<td>' . $row['class_name'] . '</td>';
+			echo '<td>' . $row['alignment_name'] . '</td>';
 			echo '<td>' . $row['char_level'] . '</td>';
 			echo '<td>' . $row['xp'] . '</td>';
 			echo '<td>' . $row['hp_max'] . '</td>';
