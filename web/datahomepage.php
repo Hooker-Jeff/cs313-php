@@ -42,6 +42,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  }
 	  
 	  ?>
+	  <li><p><a href='newCharacter.php">Add a new Character</a></p></li>
 	  
 	  </ul>
 	  

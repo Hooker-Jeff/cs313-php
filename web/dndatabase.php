@@ -166,6 +166,7 @@ $character_name = $character['character_name'];
 		}
 		
 		?>
+		
 	</body>
 </html>
 			
