@@ -17,8 +17,6 @@ $query='SELECT * FROM character c
 JOIN race r ON c.local_race_id = r.race_id 
 JOIN class_table s ON c.local_class_id = s.class_id 
 JOIN alignment a ON c.local_alignment_id = a.alignment_id 
-JOIN inventory i ON c.character_id = i.i_char_id
-JOIN spells m ON c.character_id = m.m_char_id 
 WHERE c.character_id = :id';
 
 $stmt = $db->prepare($query);
@@ -166,7 +164,6 @@ $character_name = $character['character_name'];
 			
 			echo '<br/><br/><br/>';
 		}
-		
 		
 		?>
 	</body>
