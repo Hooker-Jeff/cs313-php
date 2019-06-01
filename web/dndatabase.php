@@ -7,11 +7,13 @@ if (!isset($_GET['character_id'])) {
 $character_id = htmlspecialchars($_GET['character_id']);
 
 
-
-/*
 require("dbConnect.php");
 $db = get_db();
 
+
+
+
+/*
 try
 {
   $dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');
@@ -33,13 +35,21 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
-
-/*
-$qry="SELECT public.character.local_race_id, public.race.race_id FROM public.character INNER JOIN public.race on public.character.local_race_id = public.race.race_id";
-*/		
-
 */
+
+
+$query='SELECT * FROM character c 
+ JOIN race r ON c.local_race_id = r.race_id 
+ JOIN class_table s ON c.local_class_id = s.class_id 
+ JOIN alignment a ON c.local_alignmnet_id = a.alignment_id
+ WHERE character_id = :id';
+$stmt = $db->prepare($query);
+$stmt->bindValue(":id", $character_id, PDO::PARAM_INT);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
 
 
 ?>
@@ -65,19 +75,13 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 
 	<body>
 
-	  <h1> D&D Database </h1>
+	  <h1> D&D info for <?php echo $character_name;?> </h1>
 	  
 	  
 
 		<?php
-		
-		/*
-		foreach ($db->query('SELECT * FROM public.character WHERE character_name = $_POST['value'] ') as $row)
-		*/
-
-
-		
-		foreach ($db->query('SELECT * FROM public.character') as $row)
+				
+		foreach ($rows as $row)
 		{
 			echo '<table style="width:100%" ><tr><th>Character Name</th>';
 			echo '<th>Player Name</th>';
@@ -164,27 +168,28 @@ $qry="SELECT public.character.local_race_id, public.race.race_id FROM public.cha
 			echo '<td>' . $row['gold'] . '</td></tr></table><br/><br/>';
 			 
 			 
-			 echo '<table align="center" width="50%"><tr><td>Athletics</td><td>' . $row['ability1'] . '</td></tr>';
-			 echo '<tr><td>Acrobatics</td><td>' . $row['ability2'] . '</td></tr>';
-			 echo '<tr><td>Slight of Hand</td><td>' . $row['ability3'] . '</td></tr>';
-			 echo '<tr><td>Stealth</td><td>' . $row['ability4'] . '</td></tr>';
-			 echo '<tr><td>Arcane</td><td>' . $row['ability5'] . '</td></tr>';
-			 echo '<tr><td>History</td><td>' . $row['ability6'] . '</td></tr>';
-			 echo '<tr><td>Investigation</td><td>' . $row['ability7'] . '</td></tr>';
-			 echo '<tr><td>Nature</td><td>' . $row['ability8'] . '</td></tr>';
-			 echo '<tr><td>Religion</td><td>' . $row['ability9'] . '</td></tr>';
-			 echo '<tr><td>Insight</td><td>' . $row['ability10'] . '</td></tr>';
-			 echo '<tr><td>Medicine</td><td>' . $row['ability11'] . '</td></tr>';
-			 echo '<tr><td>Animal Handling</td><td>' . $row['ability12'] . '</td></tr>';
-			 echo '<tr><td>Perception</td><td>' . $row['ability13'] . '</td></tr>';
-			 echo '<tr><td>Survival</td><td>' . $row['ability14'] . '</td></tr>';
-			 echo '<tr><td>Deception</td><td>' . $row['ability15'] . '</td></tr>';
-			 echo '<tr><td>Intimidation</td><td>' . $row['ability16'] . '</td></tr>';
-			 echo '<tr><td>Performance</td><td>' . $row['ability17'] . '</td></tr>';
-			 echo '<tr><td>Persuasion</td><td>' . $row['ability18'] . '</td></tr></table>';
 			 
+			echo '<table align="center" width="50%"><tr><td>Athletics</td><td>' . $row['ability1'] . '</td></tr>';
+			echo '<tr><td>Acrobatics</td><td>' . $row['ability2'] . '</td></tr>';
+			echo '<tr><td>Slight of Hand</td><td>' . $row['ability3'] . '</td></tr>';
+			echo '<tr><td>Stealth</td><td>' . $row['ability4'] . '</td></tr>';
+			echo '<tr><td>Arcane</td><td>' . $row['ability5'] . '</td></tr>';
+			echo '<tr><td>History</td><td>' . $row['ability6'] . '</td></tr>';
+			echo '<tr><td>Investigation</td><td>' . $row['ability7'] . '</td></tr>';
+			echo '<tr><td>Nature</td><td>' . $row['ability8'] . '</td></tr>';
+			echo '<tr><td>Religion</td><td>' . $row['ability9'] . '</td></tr>';
+			echo '<tr><td>Insight</td><td>' . $row['ability10'] . '</td></tr>';
+			echo '<tr><td>Medicine</td><td>' . $row['ability11'] . '</td></tr>';
+			echo '<tr><td>Animal Handling</td><td>' . $row['ability12'] . '</td></tr>';
+			echo '<tr><td>Perception</td><td>' . $row['ability13'] . '</td></tr>';
+			echo '<tr><td>Survival</td><td>' . $row['ability14'] . '</td></tr>';
+			echo '<tr><td>Deception</td><td>' . $row['ability15'] . '</td></tr>';
+			echo '<tr><td>Intimidation</td><td>' . $row['ability16'] . '</td></tr>';
+			echo '<tr><td>Performance</td><td>' . $row['ability17'] . '</td></tr>';
+			echo '<tr><td>Persuasion</td><td>' . $row['ability18'] . '</td></tr></table>';
 			
-			 echo '<br/><br/><br/>';
+			
+			echo '<br/><br/><br/>';
 		}
 		
 		?>
