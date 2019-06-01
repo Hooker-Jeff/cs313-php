@@ -135,7 +135,7 @@ try
 	
 	$statement->execute();
 	
-	//$scriptureId = $db->lastInsertId("scripture_id_seq");
+	$character_id = $db->lastInsertId("character_id_seq");
 	
 	
 }
