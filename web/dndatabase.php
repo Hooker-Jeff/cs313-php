@@ -166,6 +166,11 @@ $character_name = $character['character_name'];
 		}
 		
 		?>
+		<form method="post" action="datahomepage.php">
+			<input type="submit" value="Return to Homepage">
+		</form>
+		
+		<br/><br/>
 		
 		<form method="post" action="character-delete.php">
 			<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
