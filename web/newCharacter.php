@@ -32,6 +32,10 @@ $db = get_db();
 	
 	<form id="mainForm" action="newCharacter-insert.php" method="POST">
 
+	<input type="text" id="char_id" name="char_id"></input>
+	<label for="char_id">Character ID</label>
+	<br /><br />
+	
 	<input type="text" id="char_name" name="char_name"></input>
 	<label for="char_name">Character Name</label>
 	<br /><br />

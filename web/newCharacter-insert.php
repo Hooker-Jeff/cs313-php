@@ -66,13 +66,13 @@ $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO character(character_name, player_name, local_race_id, local_class_id, local_alignment_id, char_level, xp, hp_max, hp_current, 
+	$query = 'INSERT INTO character(character_id, character_name, player_name, local_race_id, local_class_id, local_alignment_id, char_level, xp, hp_max, hp_current, 
 str_amnt, str_bonus, str_saving, dex_amnt, dex_bonus, dex_saving, con_amnt, con_bonus, con_saving, 
 int_amnt, int_bonus, int_saving, wis_amnt, wis_bonus, wis_saving, cha_amnt, cha_bonus, cha_saving, 
 ac, hit_dice, prof_bonus, speed, gold, 
 ability1, ability2, ability3, ability4, ability5, ability6, ability7, ability8, ability9, ability10, 
 ability11, ability12, ability13, ability14, ability15, ability16, ability17, ability18) 
-VALUES(:char_name, :player_name, :race_id, :class_id, :alignment_id, :char_level, :exp, :max_hp, :current_hp, 
+VALUES(:char_id, :char_name, :player_name, :race_id, :class_id, :alignment_id, :char_level, :exp, :max_hp, :current_hp, 
 :str_level, :str_bonus, :str_saving, 
 :dex_level, :dex_bonus, :dex_saving, 
 :con_level, :con_bonus, :con_saving, 
@@ -85,6 +85,7 @@ VALUES(:char_name, :player_name, :race_id, :class_id, :alignment_id, :char_level
 
 	$statement = $db->prepare($query);
 	
+	$statement->bindValue(':char_id', $char_id);
 	$statement->bindValue(':char_name', $char_name);
 	$statement->bindValue(':player_name', $player_name);
 	$statement->bindValue(':race_id', $race_id);
