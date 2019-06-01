@@ -86,7 +86,7 @@ VALUES(:char_id, :char_name, :player_name, :race_id, :class_id, :alignment_id, :
 
 	$statement = $db->prepare($query);
 	
-	$statement->bindValue(':char_id', $char_id);
+	//$statement->bindValue(':char_id', $char_id);
 	$statement->bindValue(':char_name', $char_name);
 	$statement->bindValue(':player_name', $player_name);
 	$statement->bindValue(':race_id', $race_id);
@@ -143,7 +143,7 @@ VALUES(:char_id, :char_name, :player_name, :race_id, :class_id, :alignment_id, :
 	
 	$statement->execute();
 	
-	//$character_id = $db->lastInsertId("character_id_seq");
+	$character_id = $db->lastInsertId();
 	
 	
 }
