@@ -22,12 +22,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	<head>
 	<title>D&D Database</title>
-	<style>
-	    * {
-		  text-align: center;
-		}
-		
-	</style>
 	</head>
 
 	<body>
