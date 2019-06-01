@@ -7,6 +7,7 @@
 //$content = $_POST['txtContent'];
 //$topicIds = $_POST['chkTopics'];
 
+$char_id = $_POST['char_id'];
 $char_name = $_POST['char_name'];
 $player_name = $_POST['player_name'];
 $race_id = $_POST['race_id'];
