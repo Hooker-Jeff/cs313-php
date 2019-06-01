@@ -167,6 +167,7 @@ $character_name = $character['character_name'];
 		
 		?>
 		
+		<a href="character-delete.php">Delete Character</a>
 	</body>
 </html>
 			

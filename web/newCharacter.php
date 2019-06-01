@@ -162,8 +162,8 @@ $db = get_db();
 	<label for="prof">Proficiency Bonus</label>
 	<br /><br />
 
-	<input type="text" id="speed" name="txtVerse"></input>
-	<label for="txtVerse">Character Speed</label>
+	<input type="text" id="speed" name="speed"></input>
+	<label for="speed">Character Speed</label>
 	<br /><br />
 	
 	<input type="text" id="gold" name="gold"></input>
