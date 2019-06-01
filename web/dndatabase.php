@@ -24,7 +24,7 @@ $stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$character_name = $rows[1]['character_name'];
+$character_name = $character['character_name'];
 
 
 
@@ -51,14 +51,11 @@ $character_name = $rows[1]['character_name'];
 
 	<body>
 
-	  <h1> D&D info for <?php echo $character_name;?> </h1>
-	  
-	  
-
-		<?php
+	  <?php
 				
 		foreach ($rows as $row)
 		{
+			echo '<h1> D&D info for ' . $row['character_name'] . '</h1><br/>';
 			echo '<table style="width:100%" ><tr><th>Character Name</th>';
 			echo '<th>Player Name</th>';
 			echo '<th>Race</th>';
