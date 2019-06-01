@@ -3,59 +3,30 @@
 require("dbConnect.php");
 $db = get_db();
 
+$character_id = htmlspecialchars($_POST['character_id']);
+
+
+try
+{
+	$query = 'DELETE FROM character WHERE character_id=:id';
+	$stmt = $db->prepare($query);
+	$stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
+	$stmt->execute();
+}
+catch (Exception $ex)
+{
+	echo "Error with DB. Details: $ex";
+	die();
+}
+header("Location: datahomepage.php");
+die();
+
+
+
+
+
+
+
 
 
 ?>
-
-<!DOCTYPE html>
-
-<html>
-
-	<head>
-	<title>Delete Character</title>
-	</head>
-
-	<body>
-	
-	<h1>Delete character?</h1>
-	
-	<form id="deleteForm" action="character-delete-confirm.php" method="POST">
-	<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
-	<input type="submit" value="Delete Character" />
-
-	</form>
-	
-	<br/><br/>
-	
-	<a href="datahomepage.php">Return to homepage</a>
-	
-
-	</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

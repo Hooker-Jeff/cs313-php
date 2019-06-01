@@ -167,7 +167,10 @@ $character_name = $character['character_name'];
 		
 		?>
 		
-		<a href="character-delete.php">Delete Character</a>
+		<form method="post" action="character-delete.php">
+			<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
+			<input type="submit" value="Delete Character">
+		</form>
 	</body>
 </html>
 			
