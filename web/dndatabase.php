@@ -11,33 +11,6 @@ require("dbConnect.php");
 $db = get_db();
 
 
-
-
-/*
-try
-{
-  $dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');
-
-  $dbOpts = parse_url($dbUrl);
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-*/
-
-
 $query='SELECT * FROM character c 
  JOIN race r ON c.local_race_id = r.race_id 
  JOIN class_table s ON c.local_class_id = s.class_id 
