@@ -1,6 +1,8 @@
 <?php
-	function get_db() {
+	function get_db() 
+	{
 	$db = NULL;
+	
 	try {
 		
 		$dbUrl = getenv('HEROKU_POSTGRESQL_ONYX_URL');

@@ -3,16 +3,15 @@
 require("dbConnect.php");
 $db = get_db();
 
+
 //$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
-//$stmt->bindValue(':id', $id, PDO::PARAM_INT);
-//$stmt->bindValue(':name', $name, PDO::PARAM_STR);
 //$stmt->execute();
 //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $query = 'SELECT character_name FROM character';
 $stmt = $db->prepare($query);
 $stmt->execute();
-$characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -36,27 +35,27 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  <h1> D&D Database </h1><br/><br/>
 	  
 	  
-	  <!--
+	  
 	  <ul>
 	  
 	  <?php
-	  /*
-	  foreach($characters as $character)
+	  
+	  foreach($rows as $character)
 	  {
 		  $char_name = $character['character_name'];
-		  echo '<li><p>$char_name</p></li>'
+		  echo "<li><p>$char_name</p></li>";
 	  }
-	  */
+	  
 	  ?>
 	  
 	  </ul>
-	  -->
 	  
 	  
 	  
 	  
 	  
 	  
+	  <!--
 	 
 	  <form action="dndatabase.php" method="POST">
 	  <select name="DnDForm">
@@ -67,6 +66,7 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  <input type="submit" value="Select Character" />
 	  </form>
 	  
+	  -->
 	  
 	</body>
 </html> 
