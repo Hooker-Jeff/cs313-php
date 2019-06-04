@@ -176,6 +176,13 @@ $character_name = $character['character_name'];
 			<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
 			<input type="submit" value="Delete Character">
 		</form>
+		
+		<br/><br/>
+		
+		<form method="post" action="character-update.php">
+			<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
+			<input type="submit" value="Update Character Info">
+		</form>
 	</body>
 </html>
 			
