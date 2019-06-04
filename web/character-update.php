@@ -53,7 +53,7 @@ $character_name = $character['character_name'];
 	<br /><br />
 	-->
 	
-	<input type="text" id="char_name" name="char_name" value="<?php echo $row['character_name'];?>"></input>
+	<input type="text" id="char_name" name="char_name" value="<?php echo $rows['character_name'];?>"></input>
 	<label for="char_name">Character Name</label>
 	<br /><br />
 
@@ -264,7 +264,7 @@ $character_name = $character['character_name'];
 	<br /><br />
 
 
-	<input type="submit" value="Add to Database" />
+	<input type="submit" value="Update Character" />
 
 	</form>
 
