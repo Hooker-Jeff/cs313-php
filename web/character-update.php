@@ -3,6 +3,8 @@
 require("dbConnect.php");
 $db = get_db();
 
+$character_id = htmlspecialchars($_POST['character_id']);
+
 $query='SELECT * FROM character c 
 JOIN race r ON c.local_race_id = r.race_id 
 JOIN class_table s ON c.local_class_id = s.class_id 
