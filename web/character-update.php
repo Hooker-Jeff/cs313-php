@@ -25,7 +25,7 @@ $character_name = $character['character_name'];
 <html>
 
 	<head>
-	<title>New Character</title>
+	<title>Update Character</title>
 	<style>
 	    * {
 		  text-align: center;
@@ -43,7 +43,7 @@ $character_name = $character['character_name'];
 	
 	<h1>Enter Updated Character Information</h1>
 	
-	<form id="mainForm" action="newCharacter-insert.php" method="POST">
+	<form id="mainForm" action="character-update-confirm.php" method="POST">
 
 	<!--
 	<input type="text" id="char_id" name="char_id"></input>
@@ -51,7 +51,7 @@ $character_name = $character['character_name'];
 	<br /><br />
 	-->
 	
-	<input type="text" id="char_name" name="char_name" value="<?php echo '$row['character_name']';?>"></input>
+	<input type="text" id="char_name" name="char_name" value="<?php echo $row['character_name'];?>"></input>
 	<label for="char_name">Character Name</label>
 	<br /><br />
 
