@@ -60,17 +60,17 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<label for="player_name">Player Name</label>
 	<br /><br />
 
-	<input type="text" id="race_id" name="race_id" value="<?php foreach ($rows as $row)echo $row['local_race_id'];?>"></input>
+	<input type="number" id="race_id" name="race_id" min="10" max="18" value="<?php foreach ($rows as $row)echo $row['local_race_id'];?>"></input>
 	<label for="race_id">Race ID</label>
 	<br />
 	<p>(10-Dwarf, 11-Elf, 12-Halfling, 13-Human, 14-Dragonborn, 15-Gnome, 16-Half Elf, 17-Half Ork, 18-Tiefling)</p><br />
 	
-	<input type="text" id="class_id" name="class_id" value="<?php foreach ($rows as $row)echo $row['local_class_id'];?>"></input>
+	<input type="number" id="class_id" name="class_id" min="20" max="31" value="<?php foreach ($rows as $row)echo $row['local_class_id'];?>"></input>
 	<label for="class_id">Class ID</label>
 	<br />
 	<p>(20-Barbarian, 21-Bard, 22-Cleric, 23-Druid, 24-Fighter, 25-Monk, 26-Paladin, 27-Ranger, 28-Rogue, 29-Sorcerer, 30-Warlock, 31-Wizard)</p><br />
 	
-	<input type="text" id="alignment_id" name="alignment_id" value="<?php foreach ($rows as $row)echo $row['local_alignment_id'];?>"></input>
+	<input type="number" id="alignment_id" name="alignment_id" min="40" max="48" value="<?php foreach ($rows as $row)echo $row['local_alignment_id'];?>"></input>
 	<label for="alignment_id">Alignment ID</label>
 	<br />
 	<p>(40-Lawful Good, 41-Lawful Neutral, 42-Lawful Evil, 43-Neutral Good, 44-True Neutral, 45-Neutral Evil, 46-Chaotic Good, 47-Chaotic Neutral, 48-Chaotic Evil)</p><br />
