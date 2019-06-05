@@ -255,6 +255,10 @@ $db = get_db();
 	<input type="submit" value="Add to Database" />
 
 	</form>
+	
+	<form method="post" action="datahomepage.php">
+		<input type="submit" value="Return to Homepage">
+	</form>
 
 	</body>
 </html>
