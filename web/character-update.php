@@ -271,6 +271,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	</form>
 	
 	<form method="post" action="dndatabase.php">
+		<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
 		<input type="submit" value="Go Back">
 	</form>
 
