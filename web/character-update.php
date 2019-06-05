@@ -266,6 +266,10 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<input type="submit" value="Update Character" />
 
 	</form>
+	
+	<form method="post" action="dndatabase.php">
+		<input type="submit" value="Go Back">
+	</form>
 
 	</body>
 </html>
