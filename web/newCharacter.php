@@ -46,15 +46,16 @@ $db = get_db();
 	<label for="player_name">Player Name</label>
 	<br /><br />
 
-	<input type="text" id="race_id" name="race_id"></input>
+	<input type="number" id="race_id" name="race_id" min="10" max="18"></input>
 	<label for="race_id">Race ID</label>
-	<br /><br />
+	<br />
+	<p>(10-Dwarf, 11-Elf, 12-Halfling, 13-Human, 14-Dragonborn, 15-Gnome, 16-Half Elf, 17-Half Ork, 18-Tiefling)</p><br /><br />
 	
-	<input type="text" id="class_id" name="class_id"></input>
+	<input type="number" id="class_id" name="class_id" min="20" max="31"></input>
 	<label for="class_id">Class ID</label>
 	<br /><br />
 	
-	<input type="text" id="alignment_id" name="alignment_id"></input>
+	<input type="number" id="alignment_id" name="alignment_id" min="40" max="48"></input>
 	<label for="alignment_id">Alignment ID</label>
 	<br /><br />
 
