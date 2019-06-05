@@ -16,7 +16,6 @@ $stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$character_name = $character['character_name'];
 
 
 
@@ -57,35 +56,35 @@ $character_name = $character['character_name'];
 	<label for="char_name">Character Name</label>
 	<br /><br />
 
-	<input type="text" id="player_name" name="player_name"></input>
+	<input type="text" id="player_name" name="player_name" value="<?php foreach ($rows as $row)echo $row['player_name'];?>"></input>
 	<label for="player_name">Player Name</label>
 	<br /><br />
 
-	<input type="text" id="race_id" name="race_id"></input>
+	<input type="text" id="race_id" name="race_id" value="<?php foreach ($rows as $row)echo $row['local_race_id'];?>"></input>
 	<label for="race_id">Race ID</label>
 	<br /><br />
 	
-	<input type="text" id="class_id" name="class_id"></input>
+	<input type="text" id="class_id" name="class_id" value="<?php foreach ($rows as $row)echo $row['local_class_id'];?>"></input>
 	<label for="class_id">Class ID</label>
 	<br /><br />
 	
-	<input type="text" id="alignment_id" name="alignment_id"></input>
+	<input type="text" id="alignment_id" name="alignment_id" value="<?php foreach ($rows as $row)echo $row['local_alignment_id'];?>"></input>
 	<label for="alignment_id">Alignment ID</label>
 	<br /><br />
 
-	<input type="text" id="char_level" name="char_level"></input>
+	<input type="text" id="char_level" name="char_level" value="<?php foreach ($rows as $row)echo $row['char_level'];?>"></input>
 	<label for="char_level">Character Level</label>
 	<br /><br />
 
-	<input type="text" id="exp" name="exp"></input>
+	<input type="text" id="exp" name="exp" value="<?php foreach ($rows as $row)echo $row['xp'];?>"></input>
 	<label for="exp">Current Experience Points</label>
 	<br /><br />
 	
-	<input type="text" id="max_hp" name="max_hp"></input>
+	<input type="text" id="max_hp" name="max_hp" value="<?php foreach ($rows as $row)echo $row['hp_max'];?>"></input>
 	<label for="max_hp">Maximum HP</label>
 	<br /><br />
 
-	<input type="text" id="current_hp" name="current_hp"></input>
+	<input type="text" id="current_hp" name="current_hp" value="<?php foreach ($rows as $row)echo $row['hp_current'];?>"></input>
 	<label for="current_hp">Current HP</label>
 	<br /><br /><br /><br />
 	
