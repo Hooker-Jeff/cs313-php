@@ -91,7 +91,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 	
 
-	<input type="text" id="str_level" name="str_level" value="<?php foreach ($rows as $row)echo $row['str_level'];?>"></input>
+	<input type="text" id="str_level" name="str_level" value="<?php foreach ($rows as $row)echo $row['str_amnt'];?>"></input>
 	<label for="str_level">Strength</label>
 	<br /><br />
 	
@@ -103,7 +103,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<label for="str_saving">Strength Saving Throw</label>
 	<br /><br />
 
-	<input type="text" id="dex_level" name="dex_level" value="<?php foreach ($rows as $row)echo $row['dex_level'];?>"></input>
+	<input type="text" id="dex_level" name="dex_level" value="<?php foreach ($rows as $row)echo $row['dex_amnt'];?>"></input>
 	<label for="dex_level">Dexterity</label>
 	<br /><br />
 	
@@ -115,7 +115,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<label for="dex_saving">Dexterity Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="con_level" name="con_level" value="<?php foreach ($rows as $row)echo $row['con_level'];?>"></input>
+	<input type="text" id="con_level" name="con_level" value="<?php foreach ($rows as $row)echo $row['con_amnt'];?>"></input>
 	<label for="con_level">Constitution</label>
 	<br /><br />
 	
@@ -127,7 +127,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<label for="con_saving">Constitution Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="int_level" name="int_level" value="<?php foreach ($rows as $row)echo $row['int_level'];?>"></input>
+	<input type="text" id="int_level" name="int_level" value="<?php foreach ($rows as $row)echo $row['int_amnt'];?>"></input>
 	<label for="int_level">Intelligence</label>
 	<br /><br />
 	
@@ -139,7 +139,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<label for="int_saving">Intelligence Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="wis_level" name="wis_level" value="<?php foreach ($rows as $row)echo $row['wis_level'];?>"></input>
+	<input type="text" id="wis_level" name="wis_level" value="<?php foreach ($rows as $row)echo $row['wis_amnt'];?>"></input>
 	<label for="wis_level">Wisdom</label>
 	<br /><br />
 	
@@ -151,7 +151,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<label for="wis_saving">Wisdom Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="cha_level" name="cha_level" value="<?php foreach ($rows as $row)echo $row['cha_level'];?>"></input>
+	<input type="text" id="cha_level" name="cha_level" value="<?php foreach ($rows as $row)echo $row['cha_amnt'];?>"></input>
 	<label for="cha_level">Charisma</label>
 	<br /><br />
 	
