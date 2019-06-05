@@ -62,7 +62,8 @@ $persuasion = $_POST['persuasion'];
 
 try
 {
-	$query = 'UPDATE character SET character_name = '$character_name', player_name = '$player_name',
+	$query = 'UPDATE character 
+	SET character_name = '"$character_name"', player_name = '"$player_name"'
 	WHERE character_id=:id';
 	$stmt = $db->prepare($query);
 	$statement->bindValue(':char_name', $char_name);
