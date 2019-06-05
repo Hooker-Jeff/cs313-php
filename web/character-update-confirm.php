@@ -63,10 +63,10 @@ $persuasion = $_POST['persuasion'];
 try
 {
 	$query = 'UPDATE character 
-	SET character_name = '.$_POST['char_name'].', player_name = '.$_POST['player_name'].'
+	SET character_name = :char_name, player_name = :player_name
 	WHERE character_id=:id';
 	
-	/*
+	
 	$stmt = $db->prepare($query);
 	$statement->bindValue(':char_name', $char_name);
 	$statement->bindValue(':player_name', $player_name);
@@ -123,11 +123,8 @@ try
 	$statement->bindValue(':persuasion', $persuasion);
 	
 	$statement->execute();
-	*/
 	
-	$stmt = $db->prepare($query);
-	$stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
-	$stmt->execute();
+	
 }
 catch (Exception $ex)
 {
