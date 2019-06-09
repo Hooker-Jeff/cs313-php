@@ -1,7 +1,5 @@
 <?php
 
-require("dbConnect.php");
-$db = get_db();
 
 $character_id = htmlspecialchars($_POST['character_id']);
 
@@ -59,11 +57,13 @@ $intimidation = $_POST['intimidation'];
 $performance = $_POST['performance'];
 $persuasion = $_POST['persuasion'];
 
+require("dbConnect.php");
+$db = get_db();
 
 try
 {
 	$query = 'UPDATE character 
-	SET character_name = :char_name, player_name = :player_name
+	SET character_name = '" . $_POST['character_name'] . "', player_name = '" . $_POST['player_name'] . "'
 	WHERE character_id=:id';
 	
 	
