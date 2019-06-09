@@ -63,7 +63,7 @@ $db = get_db();
 try
 {
 	$query = 'UPDATE character 
-	SET char_name = $char_name, player_name = $player_name, race_id = $race_id, class_id = $class_id, alignment_id = $alignment_id,
+	SET char_name = :char_name, player_name = $:player_name '/*, race_id = $race_id, class_id = $class_id, alignment_id = $alignment_id,
 	char_level = $char_level,exp = $exp, max_hp = $max_hp, current_hp = $current_hp, 
 	str_level = $str_level, str_bonus = $str_bonus, str_saving = $str_saving, 
 	dex_level = $dex_level, dex_bonus = $dex_bonus, dex_saving = $dex_saving, 
@@ -76,7 +76,7 @@ try
 	stealth = $stealth, arcane = $arcane, history = $history, investigation = $investigation, 
 	nature = $nature, religion = $religion, insight = $insight, medicine = $medicine, 
 	animal = $animal, percep = $percep, survival = $survival, deception = $deception, 
-	intimidation = $intimidation, performance = $performance, persuasion = $persuasion
+	intimidation = $intimidation, performance = $performance, persuasion = $persuasion */ . '
 	WHERE character_id=$character_id';
 	
 	
