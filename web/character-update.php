@@ -37,6 +37,9 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			border-collapse: collapse;
 		}
 		
+		form {
+			width: 50%;
+		
 	</style>
 	</head>
 
