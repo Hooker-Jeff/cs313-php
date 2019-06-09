@@ -171,7 +171,7 @@ $db = get_db();
 	<label for="speed">Character Speed</label>
 	<br /><br />
 	
-	<input type="text" id="gold" name="gold" pattern="[0-9]+" title="Number of gold pieces">></input>
+	<input type="text" id="gold" name="gold" pattern="[0-9]+" title="Number of gold pieces"></input>
 	<label for="gold">Character Gold</label>
 	<br /><br /><br /><br />
 	
