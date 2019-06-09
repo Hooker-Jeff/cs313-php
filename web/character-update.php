@@ -39,6 +39,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		
 		form {
 			width: 50%;
+		}
 		
 	</style>
 	</head>
