@@ -63,7 +63,7 @@ $db = get_db();
 try
 {
 	$query = 'UPDATE character 
-	SET character_name = '" . $_POST['character_name'] . "', player_name = '" . $_POST['player_name'] . "'
+	SET char_name = '" . $_POST['char_name'] . "', player_name = '" . $_POST['player_name'] . "', race_id = '" . $_POST['race_id'] . "'
 	WHERE character_id=:id';
 	
 	
@@ -131,7 +131,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: dndatabase.php");
+header("Location: datahomepage.php");
 die();
 
 
