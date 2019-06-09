@@ -63,7 +63,7 @@ $db = get_db();
 try
 {
 	$query = 'UPDATE character 
-	SET char_name = '" . $_POST['char_name'] . "', player_name = '" . $_POST['player_name'] . "', race_id = '" . $_POST['race_id'] . "', 
+	SET char_name = $char_name, player_name = $player_name, race_id = '" . $_POST['race_id'] . "', 
 	class_id = '" . $_POST['class_id'] . "', alignment_id = '" . $_POST['alignment_id'] . "', char_level = '" . $_POST['char_level'] . "', 
 	exp = '" . $_POST['exp'] . "', max_hp = '" . $_POST['max_hp'] . "', current_hp = '" . $_POST['current_hp'] . "', 
 	str_level = '" . $_POST['str_level'] . "', str_bonus = '" . $_POST['str_bonus'] . "', str_saving = '" . $_POST['str_saving'] . "', 
@@ -78,11 +78,10 @@ try
 	nature = '" . $_POST['nature'] . "', religion = '" . $_POST['religion'] . "', insight = '" . $_POST['insight'] . "', medicine = '" . $_POST['medicine'] . "', 
 	animal = '" . $_POST['animal'] . "', percep = '" . $_POST['percep'] . "', survival = '" . $_POST['survival'] . "', deception = '" . $_POST['deception'] . "', 
 	intimidation = '" . $_POST['intimidation'] . "', performance = '" . $_POST['performance'] . "', persuasion = '" . $_POST['persuasion'] . "'
-	WHERE character_id=:id';
+	WHERE character_id=$character_id';
 	
 	
 	$stmt = $db->prepare($query);
-	/*
 	$statement->bindValue(':char_name', $char_name);
 	$statement->bindValue(':player_name', $player_name);
 	$statement->bindValue(':race_id', $race_id);
@@ -136,7 +135,6 @@ try
 	$statement->bindValue(':intimidation', $intimidation);
 	$statement->bindValue(':performance', $performance);
 	$statement->bindValue(':persuasion', $persuasion);
-	*/
 	
 	$statement->execute();
 	
