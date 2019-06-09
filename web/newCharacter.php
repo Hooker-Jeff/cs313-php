@@ -80,174 +80,176 @@ $db = get_db();
 	
 	
 
-	<input type="text" id="str_level" name="str_level"></input>
+	<input type="text" id="str_level" name="str_level" pattern="[0-9]+" title="Number representing strength level"></input>
 	<label for="str_level">Strength</label>
 	<br /><br />
 	
-	<input type="text" id="str_bonus" name="str_bonus"></input>
+	<input type="text" id="str_bonus" name="str_bonus" pattern="[0-9]+" title="Number representing strength bonus"></input>
 	<label for="str_bonus">Strength Bonus</label>
 	<br /><br />
 
-	<input type="text" id="str_saving" name="str_saving"></input>
+	<input type="text" id="str_saving" name="str_saving" pattern="[0-9]+" title="Number representing strength saving throw"></input>
 	<label for="str_saving">Strength Saving Throw</label>
 	<br /><br />
 
-	<input type="text" id="dex_level" name="dex_level"></input>
+	<input type="text" id="dex_level" name="dex_level" pattern="[0-9]+" title="Number representing dexterity level"></input>
 	<label for="dex_level">Dexterity</label>
 	<br /><br />
 	
-	<input type="text" id="dex_bonus" name="dex_bonus"></input>
+	<input type="text" id="dex_bonus" name="dex_bonus" pattern="[0-9]+" title="Number representing dexterity bonus"></input>
 	<label for="dex_bonus">Dexterity Bonus</label>
 	<br /><br />
 
-	<input type="text" id="dex_saving" name="dex_saving"></input>
+	<input type="text" id="dex_saving" name="dex_saving" pattern="[0-9]+" title="Number representing dexterity saving throw"></input>
 	<label for="dex_saving">Dexterity Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="con_level" name="con_level"></input>
+	<input type="text" id="con_level" name="con_level" pattern="[0-9]+" title="Number representing constitution level"></input>
 	<label for="con_level">Constitution</label>
 	<br /><br />
 	
-	<input type="text" id="con_bonus" name="con_bonus"></input>
+	<input type="text" id="con_bonus" name="con_bonus" pattern="[0-9]+" title="Number representing constitution bonus"></input>
 	<label for="con_bonus">Constitution Bonus</label>
 	<br /><br />
 
-	<input type="text" id="con_saving" name="con_saving"></input>
+	<input type="text" id="con_saving" name="con_saving" pattern="[0-9]+" title="Number representing constitution saving throw"></input>
 	<label for="con_saving">Constitution Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="int_level" name="int_level"></input>
+	<input type="text" id="int_level" name="int_level" pattern="[0-9]+" title="Number representing intelligence level"></input>
 	<label for="int_level">Intelligence</label>
 	<br /><br />
 	
-	<input type="text" id="int_bonus" name="int_bonus"></input>
+	<input type="text" id="int_bonus" name="int_bonus" pattern="[0-9]+" title="Number representing intelligence bonus"></input>
 	<label for="int_bonus">Intelligence Bonus</label>
 	<br /><br />
 
-	<input type="text" id="int_saving" name="int_saving"></input>
+	<input type="text" id="int_saving" name="int_saving" pattern="[0-9]+" title="Number representing intelligence saving throw"></input>
 	<label for="int_saving">Intelligence Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="wis_level" name="wis_level"></input>
+	<input type="text" id="wis_level" name="wis_level" pattern="[0-9]+" title="Number representing wisdom level"></input>
 	<label for="wis_level">Wisdom</label>
 	<br /><br />
 	
-	<input type="text" id="wis_bonus" name="wis_bonus"></input>
+	<input type="text" id="wis_bonus" name="wis_bonus" pattern="[0-9]+" title="Number representing wisdom bonus"></input>
 	<label for="wis_bonus">Wisdom Bonus</label>
 	<br /><br />
 
-	<input type="text" id="wis_saving" name="wis_saving"></input>
+	<input type="text" id="wis_saving" name="wis_saving" pattern="[0-9]+" title="Number representing wisdom saving throw"></input>
 	<label for="wis_saving">Wisdom Saving Throw</label>
 	<br /><br />
 	
-	<input type="text" id="cha_level" name="cha_level"></input>
+	<input type="text" id="cha_level" name="cha_level" pattern="[0-9]+" title="Number representing charisma level"></input>
 	<label for="cha_level">Charisma</label>
 	<br /><br />
 	
-	<input type="text" id="cha_bonus" name="cha_bonus"></input>
+	<input type="text" id="cha_bonus" name="cha_bonus" pattern="[0-9]+" title="Number representing charisma bonus"></input>
 	<label for="cha_bonus">Charisma Bonus</label>
 	<br /><br />
 
-	<input type="text" id="cha_saving" name="cha_saving"></input>
+	<input type="text" id="cha_saving" name="cha_saving" pattern="[0-9]+" title="Number representing charisma saving throw"></input>
 	<label for="cha_saving">Charisma Saving Throw</label>
 	<br /><br /><br /><br />
 	
 	
 	
 	
-	<input type="text" id="ac" name="ac"></input>
+	<input type="number" id="ac" name="ac" min="8" max="50"></input>
 	<label for="ac">Armor Class</label>
 	<br /><br />
 	
-	<input type="text" id="hit_dice" name="hit_dice"></input>
+	<input type="number" id="hit_dice" name="hit_dice" min="1" max="20"></input>
 	<label for="hit_dice">Total Hit Dice</label>
 	<br /><br />
 
-	<input type="text" id="prof" name="prof"></input>
+	<input type="number" id="prof" name="prof" min="1" max="10"></input>
 	<label for="prof">Proficiency Bonus</label>
 	<br /><br />
 
-	<input type="text" id="speed" name="speed"></input>
+	<input type="text" id="speed" name="speed"pattern="[0-9]+" title="Number representing character speed"></input>
 	<label for="speed">Character Speed</label>
 	<br /><br />
 	
-	<input type="text" id="gold" name="gold"></input>
+	<input type="text" id="gold" name="gold" pattern="[0-9]+" title="Number of gold pieces">></input>
 	<label for="gold">Character Gold</label>
 	<br /><br /><br /><br />
 	
 	
 	
 	
+	
+	
 
-	<input type="text" id="athletics" name="athletics"></input>
+	<input type="text" id="athletics" name="athletics" pattern="[0-9]+" title="Number representing athletics skill level"></input>
 	<label for="athletics">Athletics</label>
 	<br /><br />
 
-	<input type="text" id="acrobatics" name="acrobatics"></input>
+	<input type="text" id="acrobatics" name="acrobatics" pattern="[0-9]+" title="Number representing acrobatics skill level"></></input>
 	<label for="acrobatics">Acrobatics</label>
 	<br /><br />
 	
-	<input type="text" id="slight" name="slight"></input>
+	<input type="text" id="slight" name="slight" pattern="[0-9]+" title="Number representing slight of hand skill level"></></input>
 	<label for="slight">Slight of Hand</label>
 	<br /><br />
 
-	<input type="text" id="stealth" name="stealth"></input>
+	<input type="text" id="stealth" name="stealth" pattern="[0-9]+" title="Number representing stealth skill level"></></input>
 	<label for="stealth">Stealth</label>
 	<br /><br />
 
-	<input type="text" id="arcane" name="arcane"></input>
+	<input type="text" id="arcane" name="arcane" pattern="[0-9]+" title="Number representing arcane skill level"></></input>
 	<label for="arcane">Arcane</label>
 	<br /><br />
 	
-	<input type="text" id="history" name="history"></input>
+	<input type="text" id="history" name="history" pattern="[0-9]+" title="Number representing history skill level"></></input>
 	<label for="history">History</label>
 	<br /><br />
 
-	<input type="text" id="investigation" name="investigation"></input>
+	<input type="text" id="investigation" name="investigation" pattern="[0-9]+" title="Number representing investigation skill level"></></input>
 	<label for="investigation">Investigation</label>
 	<br /><br />
 
-	<input type="text" id="nature" name="nature"></input>
+	<input type="text" id="nature" name="nature" pattern="[0-9]+" title="Number representing nature skill level"></></input>
 	<label for="nature">Nature</label>
 	<br /><br />
 	
-	<input type="text" id="religion" name="religion"></input>
+	<input type="text" id="religion" name="religion" pattern="[0-9]+" title="Number representing religion skill level"></></input>
 	<label for="religion">Religion</label>
 	<br /><br />
 
-	<input type="text" id="insight" name="insight"></input>
+	<input type="text" id="insight" name="insight" pattern="[0-9]+" title="Number representing insight skill level"></></input>
 	<label for="insight">Insight</label>
 	<br /><br />
 
-	<input type="text" id="medicine" name="medicine"></input>
+	<input type="text" id="medicine" name="medicine" pattern="[0-9]+" title="Number representing medicine skill level"></></input>
 	<label for="medicine">Medicine</label>
 	<br /><br />
 	
-	<input type="text" id="animal" name="animal"></input>
+	<input type="text" id="animal" name="animal" pattern="[0-9]+" title="Number representing animal handling skill level"></></input>
 	<label for="animal">Animal Handling</label>
 	<br /><br />
 
-	<input type="text" id="percep" name="percep"></input>
+	<input type="text" id="percep" name="percep" pattern="[0-9]+" title="Number representing perception skill level"></></input>
 	<label for="percep">Perception</label>
 	<br /><br />
 
-	<input type="text" id="survival" name="survival"></input>
+	<input type="text" id="survival" name="survival" pattern="[0-9]+" title="Number representing survival skill level"></></input>
 	<label for="survival">Survival</label>
 	<br /><br />
 	
-	<input type="text" id="deception" name="deception"></input>
+	<input type="text" id="deception" name="deception" pattern="[0-9]+" title="Number representing deception skill level"></></input>
 	<label for="deception">Deception</label>
 	<br /><br />
 
-	<input type="text" id="intimidation" name="intimidation"></input>
+	<input type="text" id="intimidation" name="intimidation" pattern="[0-9]+" title="Number representing intimidation skill level"></></input>
 	<label for="intimidation">Intimidation</label>
 	<br /><br />
 
-	<input type="text" id="performance" name="performance"></input>
+	<input type="text" id="performance" name="performance" pattern="[0-9]+" title="Number representing performance skill level"></></input>
 	<label for="performance">Performance</label>
 	<br /><br />
 
-	<input type="text" id="persuasion" name="persuasion"></input>
+	<input type="text" id="persuasion" name="persuasion" pattern="[0-9]+" title="Number representing persuasion skill level"></></input>
 	<label for="persuasion">Persuasion</label>
 	<br /><br />
 
