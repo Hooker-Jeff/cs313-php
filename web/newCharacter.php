@@ -61,19 +61,19 @@ $db = get_db();
 	<br />
 	<p>(40-Lawful Good, 41-Lawful Neutral, 42-Lawful Evil, 43-Neutral Good, 44-True Neutral, 45-Neutral Evil, 46-Chaotic Good, 47-Chaotic Neutral, 48-Chaotic Evil)</p><br />
 
-	<input type="text" id="char_level" name="char_level" required></input>
+	<input type="number" id="char_level" name="char_level" min="0" max="20" required></input>
 	<label for="char_level">Character Level</label>
 	<br /><br />
 
-	<input type="text" id="exp" name="exp" required></input>
+	<input type="text" id="exp" name="exp" required pattern="[0-9]+" title="Number of experience points" ></input>
 	<label for="exp">Current Experience Points</label>
 	<br /><br />
 	
-	<input type="text" id="max_hp" name="max_hp" required></input>
+	<input type="text" id="max_hp" name="max_hp" required pattern="[0-9]+" title="Total number of health points"></input>
 	<label for="max_hp">Maximum HP</label>
 	<br /><br />
 
-	<input type="text" id="current_hp" name="current_hp" required></input>
+	<input type="text" id="current_hp" name="current_hp" required pattern="[0-9]+" title="Current number of health points"></input>
 	<label for="current_hp">Current HP</label>
 	<br /><br /><br /><br />
 	

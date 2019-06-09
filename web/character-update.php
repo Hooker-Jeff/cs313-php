@@ -75,19 +75,19 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<br />
 	<p>(40-Lawful Good, 41-Lawful Neutral, 42-Lawful Evil, 43-Neutral Good, 44-True Neutral, 45-Neutral Evil, 46-Chaotic Good, 47-Chaotic Neutral, 48-Chaotic Evil)</p><br />
 
-	<input type="text" id="char_level" name="char_level" value="<?php foreach ($rows as $row)echo $row['char_level'];?>" required></input>
+	<input type="number" id="char_level" name="char_level" min="0" max="20" value="<?php foreach ($rows as $row)echo $row['char_level'];?>" required></input>
 	<label for="char_level">Character Level</label>
 	<br /><br />
 
-	<input type="text" id="exp" name="exp" value="<?php foreach ($rows as $row)echo $row['xp'];?>" required></input>
+	<input type="text" id="exp" name="exp" value="<?php foreach ($rows as $row)echo $row['xp'];?>" pattern="[0-9]+" title="Number of experience points" required></input>
 	<label for="exp">Current Experience Points</label>
 	<br /><br />
 	
-	<input type="text" id="max_hp" name="max_hp" value="<?php foreach ($rows as $row)echo $row['hp_max'];?>" required></input>
+	<input type="text" id="max_hp" name="max_hp" value="<?php foreach ($rows as $row)echo $row['hp_max'];?>" required pattern="[0-9]+" title="Total number of health points"></input>
 	<label for="max_hp">Maximum HP</label>
 	<br /><br />
 
-	<input type="text" id="current_hp" name="current_hp" value="<?php foreach ($rows as $row)echo $row['hp_current'];?>" required></input>
+	<input type="text" id="current_hp" name="current_hp" value="<?php foreach ($rows as $row)echo $row['hp_current'];?>" required pattern="[0-9]+" title="Current number of health points"></input>
 	<label for="current_hp">Current HP</label>
 	<br /><br /><br /><br />
 	
