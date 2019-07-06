@@ -29,7 +29,7 @@ list.addEventListener('click', function(ev) {
 
 function newElement() {
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
+  var inputValue = document.getElementById("input").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -37,7 +37,7 @@ function newElement() {
   } else {
     document.getElementById("myUL").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  document.getElementById("input").value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
