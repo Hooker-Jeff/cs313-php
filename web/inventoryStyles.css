@@ -1,28 +1,33 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
 ul{
     padding: 0;
     margin: 0;
 }
 
 
-li{
+ul li{
     width: 75%;
-    position: relative;
-    background: #eee;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: arial;
-    font-size: 20px;
     cursor: pointer;
-    letter-spacing: 1px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    position: relative;
+    padding: 20px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
 }
 
-
-* {
-  box-sizing: border-box;
+ul li:nth-child(odd) {
+  background: #f9f9f9;
 }
 
 
