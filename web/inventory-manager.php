@@ -7,8 +7,7 @@ if (!isset($_GET['character_id'])) {
 }
 
 
-$invent_id = htmlspecialchars($_GET['character_id']);
-
+$character_id = htmlspecialchars($_GET['character_id']);
 
 
 require("dbConnect.php");
