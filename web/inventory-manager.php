@@ -42,7 +42,7 @@ $character_name = $character['character_name'];
 <div id="myDIV" class="header">
 
 <?php
-echo '<h1> Inventory for ' . $rows['character_name'] . '</h1><br/>';
+echo '<h1> Inventory for ' . $character['character_name'] . '</h1><br/>';
 ?>
 
 <input type="text" id="input" placeholder="Item...">
