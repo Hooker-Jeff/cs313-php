@@ -8,8 +8,7 @@ $db = get_db();
 //$stmt->execute();
 //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$query = 'SELECT character_name,character_id FROM character
-JOIN inventory i ON c.character_id = i.i_char_id':
+$query = 'SELECT character_name,character_id FROM character':
 $stmt = $db->prepare($query);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -41,7 +40,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  {
 		  $id = $character['character_id'];
 		  $char_name = $character['character_name'];
-		  echo "<li><p><a href='dndatabase.php?character_id=$id'>$char_name</a></p></li>";
+		  echo "<li><p><a href='inventory-manager.php?character_id=$id'>$char_name</a></p></li>";
 	  }
 	  
 	  ?>
