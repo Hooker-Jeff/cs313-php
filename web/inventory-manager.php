@@ -41,8 +41,12 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <span onclick="newElement()" class="addBtn">Add</span>
 </div>
 
-<ul id="myUL">
-</ul>
+<?php
+
+echo '<ul id="myUL">';
+echo '</ul>';
+
+?>
 
 </body>
 </html>
