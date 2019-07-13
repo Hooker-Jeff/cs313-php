@@ -17,7 +17,7 @@ $db = get_db();
 
 $query='SELECT * FROM character c
 JOIN inventory i ON c.character_id = i.i_char_id
-WHERE c.character_id = :id';
+WHERE i.i_char_id = :id';
 
 $stmt = $db->prepare($query);
 $stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
