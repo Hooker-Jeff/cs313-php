@@ -41,7 +41,7 @@ $character_name = $character['character_name'];
 
 <?php
 echo '<div id="myDIV" class="header">' . "\n";
-echo '<h1> Inventory for ' . $character_name . '</h1><br/>' . "\n";
+echo '<h1> Inventory Manager</h1><br/>' . "\n";
 echo '<input type="text" id="input" placeholder="Item...">' . "\n";
 echo '<span onclick="newElement()" class="addBtn">Add</span>' . "\n";
 echo '</div>' . "\n";
@@ -49,7 +49,7 @@ echo '<ul id="myUL">' . "\n";
 
 foreach ($rows as $row)
 		{
-			echo '<li>' . $row['invent_name'] . '</li>';			
+			echo '<li>' . $row['invent_name'] . ' : ' . $row['invent_note'] . '</li>';			
 		}
 
 ?>
