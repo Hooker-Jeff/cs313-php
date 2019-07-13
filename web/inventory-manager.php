@@ -39,21 +39,14 @@ $character_name = $character['character_name'];
 </head>
 
 <body>
-<div id="myDIV" class="header">
 
 <?php
+echo '<div id="myDIV" class="header">';
 echo '<h1> Inventory for ' . $character['character_name'] . '</h1><br/>';
-?>
-
-<input type="text" id="input" placeholder="Item...">
-<span onclick="newElement()" class="addBtn">Add</span>
-</div>
-
-
-<ul id="myUL">
-
-<?php
-
+echo '<input type="text" id="input" placeholder="Item...">';
+echo '<span onclick="newElement()" class="addBtn">Add</span>';
+echo '</div>';
+echo '<ul id="myUL">';
 
 foreach ($rows as $row)
 		{
@@ -66,3 +59,34 @@ foreach ($rows as $row)
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
