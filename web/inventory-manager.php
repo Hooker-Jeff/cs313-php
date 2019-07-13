@@ -24,6 +24,8 @@ $stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$character_name = $character['character_name'];
+
 /**/
 
 ?>
