@@ -47,7 +47,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	  </ul>
 	  
 	  
-	  
+	  </br></br><a href="inventoryhomepage.php">Inventory Manager page</a></br></br>
 	  
 	  
 	  
