@@ -15,7 +15,7 @@ require("dbConnect.php");
 $db = get_db();
 
 
-$query='SELECT invent_name FROM character c
+$query='SELECT * FROM character c
 JOIN inventory i ON c.character_id = i.i_char_id
 WHERE c.character_id = :id';
 
