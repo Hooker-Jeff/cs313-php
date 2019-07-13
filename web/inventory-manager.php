@@ -16,7 +16,7 @@ $db = get_db();
 
 $query='SELECT * FROM character c
 JOIN inventory i ON c.character_id = i.i_char_id
-WHERE i.i_char_id = :id';
+WHERE c.character_id = :id';
 
 $stmt = $db->prepare($query);
 $stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
@@ -41,7 +41,7 @@ $character_name = $character['character_name'];
 
 <?php
 echo '<div id="myDIV" class="header">' . "\n";
-echo '<h1> Inventory for ' . $row['character_name'] . '</h1><br/>' . "\n";
+echo '<h1> Inventory for ' . $rows['character_name'] . '</h1><br/>' . "\n";
 echo '<input type="text" id="input" placeholder="Item...">' . "\n";
 echo '<span onclick="newElement()" class="addBtn">Add</span>' . "\n";
 echo '</div>' . "\n";
