@@ -15,12 +15,12 @@ require("dbConnect.php");
 $db = get_db();
 
 
-$query='SELECT * FROM character c
+$query='SELECT invent_name FROM character c
 JOIN inventory i ON c.character_id = i.i_char_id
-WHERE i.i_char_id = :id';
+WHERE c.character_id = :id';
 
 $stmt = $db->prepare($query);
-$stmt->bindValue(':id', $i_char_id, PDO::PARAM_INT);
+$stmt->bindValue(':id', $character_id, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
