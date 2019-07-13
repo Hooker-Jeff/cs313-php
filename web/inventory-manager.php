@@ -38,7 +38,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
 <div id="myDIV" class="header">
-<h1>Inventory Manager</h1></br></br>
+
+<?php
+echo '<h1> Inventory for ' . $row['character_name'] . '</h1><br/>';
+?>
+
 <input type="text" id="input" placeholder="Item...">
 <span onclick="newElement()" class="addBtn">Add</span>
 </div>
