@@ -2,12 +2,12 @@
 
 /**/
 
-if (!isset($_GET['i_char_id'])) {
+if (!isset($_GET['character_id'])) {
 	die("Error, character ID not specified");
 }
 
 
-$invent_id = htmlspecialchars($_GET['i_char_id']);
+$invent_id = htmlspecialchars($_GET['character_id']);
 
 
 
@@ -15,7 +15,8 @@ require("dbConnect.php");
 $db = get_db();
 
 
-$query='SELECT * FROM inventory i
+$query='SELECT * FROM character c
+JOIN inventory i ON c.character_id = i.i_char_id
 WHERE i.i_char_id = :id';
 
 $stmt = $db->prepare($query);
