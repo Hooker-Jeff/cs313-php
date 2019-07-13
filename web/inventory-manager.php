@@ -7,7 +7,7 @@ if (!isset($_GET['invent_id'])) {
 }
 
 
-$character_id = htmlspecialchars($_GET['invent_id']);
+$invent_id = htmlspecialchars($_GET['invent_id']);
 
 
 
