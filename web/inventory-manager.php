@@ -1,6 +1,6 @@
 <?php
 
-/**/
+/*
 
 if (!isset($_GET['invent_id'])) {
 	die("Error, inventory ID not specified");
@@ -9,7 +9,7 @@ if (!isset($_GET['invent_id'])) {
 
 $invent_id = htmlspecialchars($_GET['invent_id']);
 
-
+*/
 
 require("dbConnect.php");
 $db = get_db();
@@ -18,7 +18,7 @@ $db = get_db();
 $query='SELECT * FROM inventory;'
 
 $stmt = $db->prepare($query);
-$stmt->bindValue(':id', $invent_id, PDO::PARAM_INT);
+//$stmt->bindValue(':id', $invent_id, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
