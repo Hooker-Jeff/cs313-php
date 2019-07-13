@@ -1,5 +1,14 @@
 <?php
 
+
+if (!isset($_GET['invent_id'])) {
+	die("Error, inventory ID not specified");
+}
+
+
+$character_id = htmlspecialchars($_GET['invent_id']);
+
+
 require("dbConnect.php");
 $db = get_db();
 
