@@ -49,7 +49,7 @@ echo '<ul id="myUL">' . "\n";
 
 foreach ($rows as $row)
 		{
-			echo '<li>' . $row['invent_name'] . '</li';			
+			echo '<li>' . $row['invent_name'] . '</li>';			
 		}
 
 ?>
