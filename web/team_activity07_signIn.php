@@ -18,15 +18,15 @@ session_start();
 $badLogin = false;
 // First check to see if we have post variables, if not, just
 // continue on as always.
-if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
+if (isset($_POST['employee_id']) && isset($_POST['employee_password']))
 {
 	// they have submitted a username and password for us to check
-	$username = $_POST['txtUser'];
-	$password = $_POST['txtPassword'];
+	$username = $_POST['employee_id'];
+	$password = $_POST['employee_password'];
 	// Connect to the DB
 	require("dbConnect.php");
 	$db = get_db();
-	$query = 'SELECT password FROM login WHERE username=:username';
+	$query = 'SELECT password FROM naf_employee WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
