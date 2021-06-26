@@ -76,12 +76,12 @@ if ($badLogin)
 
 <form id="mainForm" action="team_activity07_signIn.php" method="POST">
 
-	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
-	<label for="txtUser">Username</label>
+	<input type="text" id="employee_id" name="employee_id" placeholder="Employee ID">
+	<label for="employee_id">Employee ID</label>
 	<br /><br />
 
-	<input type="password" id="txtPassword" name="txtPassword" placeholder="Password">
-	<label for="txtPassword">Password</label>
+	<input type="password" id="employee_password" name="employee_password" placeholder="Password">
+	<label for="employee_password">Password</label>
 	<br /><br />
 
 	<input type="submit" value="Sign In" />
