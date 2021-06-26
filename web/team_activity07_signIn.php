@@ -26,7 +26,7 @@ if (isset($_POST['employee_id']) && isset($_POST['employee_password']))
 	// Connect to the DB
 	require("dbConnect.php");
 	$db = get_db();
-	$query = 'SELECT password FROM naf_employee WHERE username=:username';
+	$query = 'SELECT employee_password FROM naf_employee WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
